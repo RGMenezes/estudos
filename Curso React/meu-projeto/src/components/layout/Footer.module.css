@@ -1,0 +1,13 @@
+.social_list{
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-content: center;
+    list-style: none;
+}
+
+.social_list svg{
+    cursor: pointer;
+    font-size: 1.5em;
+    color: rgb(28, 95, 125);
+}

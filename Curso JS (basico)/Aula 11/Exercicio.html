@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou Brasileiro</title>
+</head>
+<body>
+    <h1>Descobridor</h1>
+    Nome: <input type="text" name="txtno" id="txtno"> País de origem: <input type="text" name="txtor" id="txtor">
+    <input type="button" value="Comfirmar" onclick= comfirma()>
+    <input type="checkbox" value="Surpresa!" onclick= surpresa()>
+    <div id= "res">
+    </div>
+    <div id= 'sur'>
+
+    </div>
+    <script>
+        function comfirma(){
+            var ori = window.document.querySelector('input#txtor')
+            var nome = window.document.querySelector('input#txtno')
+            var res = window.document.querySelector('div#res')
+            var origem = String(ori.value)
+            var no = String(nome.value)
+            if (origem != 'Brasil'){
+                res.innerHTML = `<p>Olá <strong>${no}</strong>, você é um estrangeiro, bem vindo ao Brasil!</p>`
+            }else{
+                res.innerHTML = `<p>Olá <strong>${no}</strong>, você é um brasileiro, bem vindo de volta ao Brasil!</p>`
+            }
+        }
+
+        function surpresa(){
+            var sur = window.document.querySelector('div#sur')
+            var ori = window.document.querySelector('input#txtor')
+            var nome = window.document.querySelector('input#txtno')
+            var origem = String(ori.value)
+            var no = String(nome.value)
+            if (origem != 'Brasil'){
+                sur.innerHTML = `É de grande satisfação receber ${no} do(a) ${origem} no nosso humilde Brasil!`
+            }else{
+                sur.innerHTML = `É de grande satisfação ter ${no} de volta ao nosso país!`
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="simbulos" viewBox="0 0 200 200">
+        <circle r="90" cx="100" cy="100" fill="blue"/>
+        <circle r="70" cx="100" cy="100" fill="#002677"/>
+        <circle r="50" cx="100" cy="100" fill="#001629"/>
+    </symbol>
+</svg>

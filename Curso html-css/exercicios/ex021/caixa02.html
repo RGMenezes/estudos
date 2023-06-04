@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gruping tags</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            background-color: silver;
+        }
+        header{
+            background-color: rgb(255, 255, 255);
+            padding: 10px;
+            margin: 10px;
+        }
+        nav{
+            background-color: gray;
+            padding: 3px;
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.384);
+        }
+        nav > a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+        nav > a:hover{
+            text-decoration: underline;
+        }
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            
+            border-radius: 0px 10px;
+            box-shadow: 4px 4px 5px 4px rgba(0, 0, 0, 0.281);
+        }
+        article{
+            background-color: lightgrey;
+        }
+        article > aside{
+            background-color: rgb(165, 163, 163);
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+        }
+        footer > p{
+            margin: 0px;
+        }
+        div#bola{
+            height: 100px;
+            width: 100px;
+            background-color: black;
+            margin: 20px 10px;
+            border-radius: 100px;
+        }
+
+        #bola:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Antigamente se fazia sites usando div dentro da div, para criar menus, cadastros e etc. -->
+
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Como anda o Brasil?</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem eius vel porro odit nihil totam similique blanditiis distinctio, expedita officia ipsam? Hic earum adipisci ullam labore, sequi odit officiis magnam?</p>
+                <aside>
+                    <p>artigo escito por Manézim</p>
+                </aside>
+            </article>
+            <article>
+
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Rafael Menezes</p>
+    </footer>
+    <div id="bola"></div>
+    
+</body>
+</html>

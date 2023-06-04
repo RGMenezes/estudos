@@ -1,0 +1,9 @@
+.lista{
+    display: flex;
+    gap: 1em;
+    list-style: none;
+}
+
+.itens{
+    color: rgb(49, 49, 49);
+}

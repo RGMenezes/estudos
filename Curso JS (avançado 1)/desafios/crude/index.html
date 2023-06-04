@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crude</title>
+    <link rel="stylesheet" href="style/mobile.css" media="all">
+    <link rel="stylesheet" href="style/otherScreen.css" media="screen and (min-width: 769px)">
+</head>
+<body>
+    <header>
+        <h1>Lista de linguagens de Programação</h1>
+        <p>Use a caixa de texto para adicionar as melhores linguagens de programação na sua opnião e apague quando quiser.</p>
+    </header>
+
+    <form>
+        <label for="input-text">Adicionar linguagem:</label>
+        <input class="input-text" type="text" name="input-text" id="input-text" placeholder="Linguagem">
+        <input class="input-submit" type="submit" value="Adicionar">
+    </form>
+
+    <div class="output">
+        <h2>Linguagens:</h2>
+        <ul id="lista">
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

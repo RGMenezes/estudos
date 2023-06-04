@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+:root{
+    --font_geral: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font_titulo: Verdana, Geneva, Tahoma, sans-serif;
+    --cor1: rgb(0, 42, 43);
+    --cor11: rgb(33, 91, 94);
+    --cor2: rgb(198, 124, 221);
+    --cor3: rgb(53, 255, 161);
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+*{
+    font: normal normal 1em var(--font_titulo);
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    width: 100vw;
+}
+
+header{
+    position: relative;
+    background-color: var(--cor1);
+    min-height: 100px;
+    color: var(--cor3);
+    border-bottom: 2px solid var(--cor3);
+}
+
+h1{
+    font: 700 normal 1.6em var(--font_titulo);
+    text-align: center;
+    padding: 10px 0px;
+}
+
+menu{
+    padding-top: 10px;
+}
+
+div#menu-button{
+    font: 700 normal 1.6em var(--font_titulo);
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 1px;
+    padding: 0px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+}
+div#menu-button:hover{
+    background-color: var(--cor11);
+    transition: all 0.5s ease-in-out;
+}
+div#menu-button:not(:hover){
+    background-color: var(--cor1);
+    transition: all 0.2s ease-in-out;
+}
+div#menu-button:active{
+    color: var(--cor2);
+    transition: text 0.1s ease-in-out;
+}
+
+nav{
+    padding: 2px;
+    border-top: 1px solid var(--cor3);
+    width: 100vw;
+    display: none;
+}
+
+a{
+    font: normal normal 1em var(--font_titulo);
+    display: block;
+    color: var(--cor3);
+    margin: 2px;
+    padding: 8px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+}
+a:hover{
+    background-color: var(--cor11);
+    transition: all 0.5s ease-in-out;
+}
+a:not(:hover){
+    transition: all 0.2s ease-in-out;
+}
+a:active{
+    color: var(--cor2);
+    text-decoration: underline;
+    transition: text 0.1s ease-in-out;
+}
+a:not(:active){
+    transition: text 0.05s ease-in-out;
+}
+
+div#menu-button:hover ~  nav, nav:hover{
+    display: block;
+}
+
+main{
+    width: 90vw;
+    margin: 20px auto;
+}
+
+p{
+    text-align: justify;
+    line-height: 2em;
+    margin: 30px 0px;
+}
+

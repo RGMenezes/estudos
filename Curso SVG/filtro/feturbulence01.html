@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filtro turbulence</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            background-color: black;
+            filter: url(#filtro);
+        }
+
+        svg{
+            filter: url(#filtro);
+            animation: girar 2s steps(100) infinite alternate;
+        }
+
+        @keyframes girar {
+            from{
+                transform: rotate(-30deg);
+            }
+            to{
+                transform: rotate(30deg);
+            }
+        }
+
+        svg > text{
+            font: normal normal 0.05em 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" width="400" viewBox="0 0 10 6">
+        <rect width="10" height="6" fill="none" stroke="#fff" stroke-width=".7"/>
+        <text x="2.2" y="3.3" fill="#fff" >Rafael Menezes</text>
+        <filter id="filtro">
+            <feTurbulence baseFrequency="0.01" numOctaves="2" seed="2" />
+            <feDisplacementMap in="SourceGraphic" scale="30"/>
+        </filter>
+    </svg>
+</body>
+</html>

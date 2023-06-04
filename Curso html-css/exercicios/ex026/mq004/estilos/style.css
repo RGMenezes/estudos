@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+/*versão mobile first*/
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3em;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100vh;
+}
+
+body{
+    background: black url(../imagens/back-phone.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+main{
+    background-color: rgba(255, 255, 255, 0.712);
+    width: 90vw;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+h1{
+    font-size: 1.5em;
+    text-align: center;
+    color: lightblue;
+    text-shadow: 2px 2px 3px black;
+}
+
+img{
+    display: block;
+    margin: auto;
+}
+
+img#phone { display: block; }
+img#tablet { display: none; }
+img#print { display: none; }
+img#pc { display: none; }
+img#tv { display: none; }

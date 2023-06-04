@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+section{
+    width: 800px;
+    grid-template-columns: auto 50%;
+}
+
+#img-login{
+    display: none;
+}
+
+#img-login_telas-grandes{
+    display: block;
+    background-color: grey;
+    background-image: url(../imagens/img_formulario.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    transition-delay: 0.2s;
+}
+
+.preencher > input{
+    width: 200px;
+}

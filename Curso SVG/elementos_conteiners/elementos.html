@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elementos</title>
+    <style>
+        svg{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        defs é um conteiner que possui itens com o intuito de repouso. Ele é renderizado até ser chamado.
+        g é um container responsável por agrupar elementos semilares.
+        symbol define que será instanciado pelo <use> e possui viewBox própria. Ele não é renderizado  até ser chamado.
+        use tág para chamar defs e symbol
+    -->
+
+    <svg>
+        <defs>
+            <circle id="circle" r="25" cx="50" cy="50"/>
+        </defs>
+
+        <symbol viewBox="0 0 200 200" id="simbulos">
+            <rect width="50" height="50" x="100" y="50"/>
+        </symbol>
+
+        <g>
+            <use y="70" fill="green" xlink:href="#circle"></use>
+            <use xlink:href="#simbulos"></use>
+        </g>
+
+    </svg>
+</body>
+</html>

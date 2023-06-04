@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+
+:root{
+    --color1: #EDF2F4;
+    --color2: #EF233C;
+    --color3: #C80032;
+    --color4: #8D99AE;
+    --color5: #2B2D42;
+
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-general: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+header{
+    padding: 10px;
+    background-color: var(--color5);
+    box-shadow: 0px 2px 5px var(--color5);
+}
+header > h1{
+    margin: 30px 5px;
+    font: 700 normal 2em var(--font-main);
+    color: var(--color2);
+    text-align: center;
+}
+header > p{
+    margin: 10px 0px;
+    font: 500 normal 0.9em var(--font-general);
+    line-height: 1.2em;
+    color: var(--color1);
+}
+
+
+form{
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--color5);
+    border-radius: 30px;
+    box-shadow: 3px 3px 5px var(--color4);
+    transition: all .3s ease;
+}
+form > label{
+    font: 700 normal 1.5em var(--font-general);
+    color: var(--color2);
+}
+.input-text{
+    width: 100%;
+    height: 2.5em;
+    padding: 0px 5px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 1px 2px black;
+    font: 600 normal 1em var(--font-general);
+}
+.input-text:focus{
+    outline: 2px solid var(--color2);
+}
+.input-submit{
+    cursor: pointer;
+    width: 100%;
+    height: 2.5em;
+    padding: 0px 5px;
+    align-self: flex-start;
+    background-color: var(--color3);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 1px 2px black;
+    font: 600 normal 1em var(--font-general);
+    color: var(--color1);
+    transition: all .3s ease;
+}
+.input-submit:hover{
+    background-color: var(--color2);
+}
+.input-submit:active{
+    background-color: var(--color4);
+    color: var(--color2);
+    transition: all .15s ease;
+}
+
+.output{
+    padding: 10px;
+    transition: all .3s ease;
+}
+.output > h2{
+    font: 700 normal 1.5em var(--font-general);
+    color: var(--color5);
+}
+.output > ul{
+    padding: 10px;
+    margin-left: 25px;
+}
+.output > ul > li{
+    height: 30px;
+    font: 500 normal 1em var(--font-general);
+    color: var(--color5);
+}
+.output > ul > li > button{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid var(--color5);
+    border-radius: 100px;
+    font-weight: 600;
+    color: var(--color5);
+    transition: all .3s ease;
+}
+.output > ul > li > button:hover{
+    border-color: var(--color2);
+    color: var(--color2);
+    transform: scale(1.1);
+}
+.output > ul > li > button:active{
+    border-color: var(--color4);
+    color: var(--color4);
+    transition: all .1s ease;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-box</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        section{
+            width: 800px;
+            height: 1000px;
+            margin: auto;
+            display: flex;
+            flex-flow: column wrap;
+            /*O flex-flow subistitui as duas tags flex-direction e flex-wrap.*/
+
+            align-items: initial;
+            justify-content: flex-end;
+            /*Forma de alinhar os items com flex-box*/
+        }
+
+        article{
+            background-color: red;
+            height: 200px;
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <!--A tag order dertermina a ordem em que os elementos seram mostrados, porém todos os elementos precisão ter esta tag para que ela funcione corretamente-->
+        <!--A tag flex é uma shorthand que determina como os elementos se redimensionaram.-->
+        <article style="order: 5;">1</article>
+        <article style="order: 4;">2</article>
+        <article style="order: 3;">3</article>
+        <article style="order: 2;">4</article>
+        <article style="order: 1;">5</article>
+        <article style="order: 0;">6</article>
+    </section>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estilização</title>
+    <style>
+        svg{
+            border: 2px solid red;
+        }
+        .circle{
+            stroke: rgb(51, 51, 51);
+            stroke-width: 2px;
+        }
+        .circle1{
+            fill: green;
+            fill-opacity: 0.3;
+            stroke-dasharray: 10;
+        }
+        .circle2{
+            fill: blue;
+            fill-opacity: 0.7;
+            stroke-dasharray: 5 10;
+        }
+        .circle3{
+            fill: red;
+            fill-opacity: 0.5;
+            stroke-dasharray: 160;
+            stroke-dashoffset: 160;
+            transition: all .4s ease-in-out;
+        }
+        .circle3:hover{
+            stroke-dashoffset: 0;
+        }
+    </style>
+</head>
+<body>
+    <svg>
+        <circle class="circle circle1" r="25" cx="50" cy="50"/>
+        <circle class="circle circle2" r="25" cx="75" cy="50"/>
+        <circle class="circle circle3" r="25" cx="100" cy="50"/>
+    </svg>
+</body>
+</html>

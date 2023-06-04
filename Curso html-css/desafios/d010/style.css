@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "idroid";
+    src: url(pacote-projeto-d010/fontes/idroid.otf) format('opentype');
+}
+@font-face {
+    font-family: "oswald-regular";
+    src: url(pacote-projeto-d010/fontes/Oswald/static/Oswald-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: "oswald-mediun";
+    src: url(pacote-projeto-d010/fontes/Oswald/static/Oswald-Medium.ttf) format('truetype');
+}
+
+body{
+    background-color: #84E1AD;
+    margin: auto;
+}
+/* cabeçalho*/
+header{
+    background-image: linear-gradient(180deg, #3CDA83, #195B38);
+    color: white;
+    height: 200px;
+    text-align: center;
+    padding: 1px 5px;
+    margin: auto;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.548);
+    
+}
+header > h1 {
+    font: normal normal 2.3em 'oswald-mediun', sans-serif;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.336);
+    margin: 15px 0px;
+    color: white;
+}
+header > p{
+    font: normal normal 1em sans-serif;
+    margin: auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.397);
+    text-align: center;
+    color: white;
+    max-width: 480px;
+    text-indent: 0px;
+}
+nav{
+    background-color: #195B38;
+    padding: 10px;
+    text-align: left;
+    margin: 0px;
+
+}
+nav > a{
+    color: white;
+    text-decoration: none;
+    margin: 0px 0px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font: normal 600 0.9em sans-serif;
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+nav > a:hover{
+    background-image: none;
+    background-color: #2FA866;
+    opacity: 1.5;
+    text-decoration: none;
+}
+nav > a:active{
+    background-color: #195b388f;
+}
+
+
+/* conteudo*/
+div#esp{
+    margin: 0px 10px 20px 10px;
+}
+main{
+    background-color: white;
+    margin:auto;
+    max-width: 780px;
+    padding: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.438);
+}
+h1{
+    font: normal normal 2em 'idroid', sans-serif;
+    color: #195B38;
+}
+h2{
+    font: normal normal 1.5em 'idroid', sans-serif;
+    color: #195B38;
+}
+p{
+    font: normal normal 1em verdana, sans-serif;
+    text-align: justify;
+    text-indent: 30px;
+}
+
+picture{
+    height: auto;
+}
+.img{
+    text-align: center;
+}
+img{
+    width: 100%;
+}
+img#bugd{
+    width: 65%;
+    max-width: 350px;
+}
+
+
+div#video{
+    background-color: #195B38;
+    text-align: center;
+    position: relative;
+    padding-bottom: 56.25%; 
+    padding-top: 25px;
+    height: 0;
+    margin:0 auto;
+}
+iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 83%;
+    margin: 5%;
+    
+
+}
+
+section{
+    background-color: #C5EBD6;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+section > h1{
+    background-color: #2FA866;
+    color: white;
+    margin: -10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font: normal bold 1em  verdana, sans-serif;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+section ul{
+    font: normal normal 1em verdana, sans-serif;
+    margin: 0px;
+    list-style-type: "\2714";
+    text-indent: 5px;
+    columns: 2;
+    list-style-position: inside;
+}
+a{
+    font: normal bold 1em sans-serif;
+    color: #195B38;
+    text-decoration: none;
+    transition:all 0.5s ease;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.link:hover{
+    background-image: linear-gradient(90deg,#00ff77b9 , #ffffff);
+}
+a:hover{
+    background-image: linear-gradient(90deg,#00ff77b9 , #ffffff);
+}
+
+.link:active{
+    background-image: linear-gradient(90deg ,#ffffff ,#00ff77b9 );
+}
+a:active{
+    background-image: linear-gradient(90deg ,#ffffff ,#00ff77b9 );
+}
+
+.link::after{
+    content: '\1F517';
+}
+
+
+/* rodapé*/
+footer{
+    background-color: #195B38;
+    color: white;
+    text-align: center;
+    font: normal normal 1em verdana, sans-serif;
+    padding: 5px;
+}
+footer > a{
+    color: white;
+}
+footer > a:hover{
+    background-image: none;
+    background-color: #2FA866;
+}
+footer > a:active{
+    background-image: none;
+    background-color: #84E1AD;
+}
+
+strong{
+    color: #195B38;
+}
+@media (max-width: 500px){
+    header{
+        margin-top: 30px;
+    }
+    nav{
+        position: fixed;
+        top: 0px;
+        font-size: 0.6em;
+        width: 100%;
+        text-align: center;
+
+    }
+    section ul{
+        columns: 1;
+    }
+    footer{
+        font-size: 0.8em;
+    }
+}

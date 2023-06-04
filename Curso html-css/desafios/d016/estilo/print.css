@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+
+*{
+    font: normal normal 1em 'Times New Roman', Times, serif;
+}
+
+header{
+    height: 50px;
+}
+
+div#menu-button{
+    display: none;
+    
+}

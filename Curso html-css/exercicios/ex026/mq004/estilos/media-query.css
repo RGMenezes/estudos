@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+/*todas as mídias*/
+
+/*typical device breackpoints
+---------------------------------------
+pequenas telas: até 600px
+celulares: de 600px até 768px
+tablet: 768px até 992px
+descktop: 992px até 1200px
+grandes telas: acima de 1200px
+
+@media screen and (max-width: 600px){}
+@media screen and (min-width: 600px){}
+
+não é necessario um style para celular e pequenas telas
+como a filosofia utilizada é a mobile first
+o style all (que é o pricipal style) já é para celulares e pequenas telas
+*/
+
+
+
+@media print { /*Impressão*/
+
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body{
+        background-image: url(../imagens/back-print.jpg);/*desnecessário (não aparece o bk pra impremir)*/
+    }
+
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
+
+    main{
+        border: 2px solid black;
+        width: 95vw;
+        height: 95vh;
+    }
+    main:after{
+        content: 'Obrigado por acessar rgmenezes.github.io';
+        font-size: 0.4em;
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: block; }
+    img#pc { display: none; }
+    img#tv { display: none; }
+}
+
+
+
+@media screen and (min-width: 768px) { /*Tablet*/
+
+    body{
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: block; }
+    img#print { display: none; }
+    img#pc { display: none; }
+    img#tv { display: none; }
+}
+
+
+
+@media screen and (min-width: 992px) { /*Desktop*/
+
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: none; }
+    img#pc { display: block; }
+    img#tv { display: none; }
+}
+
+
+
+@media screen and (min-width: 1200px) { /*Grandes telas*/
+
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: none; }
+    img#pc { display: none; }
+    img#tv { display: block; }
+}

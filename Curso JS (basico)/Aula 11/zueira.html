@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como está as suas finanças?</title>
+</head>
+<body>
+    <h1>Olá, Vamos verificar as suas finanças?</h1>
+    Qual o seu nome? <input type="text" name="txtn" id="txtn"><!--sistema de interação com o usuario-->
+    <p>Quanto você recebe de salário? <input type="number" name="nums" id="nums"></p>
+    <p>Quanto é a sua fatura por mês? <input type="number" name="numc" id="numc"></p>
+    <p><input type="button" value="Aperte AQUI!" onclick= "facil()"></p>
+    <div id="text"></div>
+<script>
+    function facil(){    
+    var nom = window.document.querySelector('input#txtn')//transformando em variáveis
+    var no = String(nom.value)
+    
+    var sala = window.document.querySelector('input#nums')
+    var salario = Number(sala.value)
+    
+    var car = window.document.querySelector('input#numc')
+    var cartao = Number(car.value)
+
+    //conta de porcentagem, regra de 3.
+    var por1 = cartao*100
+    var por2 = por1/salario
+
+    //variavel para o texto
+    var txt = window.document.querySelector('div#text')
+    
+    if (cartao/2 < salario/10 ){
+        //mensagem positiva
+        txt.innerHTML = (`Parabéns <strong>${no}</strong>!!, você sabe administras as suas finanças com sabedoria!
+        <p>A sua fatura representa <strong>${por2}%</strong> do seu salário.</p>`)
+
+    }else{
+        //mensagem negativa
+        txt.innerHTML = (`<strong>Meu Deus ${no}</strong>, se continuar assim a sua falência será iminente!
+        <p>A sua fatura representa <strong>${por2}%</strong> do seu salário.</p>`)
+    }
+}
+</script>
+</body>
+</html>

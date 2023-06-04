@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+:root{
+    --cor1: rgb(64, 0, 94);
+    --cor2: rgb(104, 206, 224);
+    --cor3: rgb(122, 90, 173);
+}
+
+body{
+    background-image: linear-gradient(to right, var(--cor1), var(--cor3));
+    background-attachment: fixed;
+}
+
+section{
+    grid-template-columns: 30% auto;
+    grid-template-rows: auto;
+    width: 70vw;
+    height: 250px;
+}
+
+#img-login{
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+}
+
+.preencher > input{
+    width: 25vw;
+}
+
+form{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-items: center;
+}

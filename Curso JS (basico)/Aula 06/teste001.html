@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--comentario?-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bora saber a nota?</title>
+    <style>
+body{background-color: rgba(52, 128, 199, 0.493);
+color: rgb(0, 0, 0); /*comentário em css*/
+font: normal 20pt times;
+}
+h1 {
+    color: rgb(255, 0, 0)
+}
+
+    </style>
+</head>
+<body>
+    <script>
+
+        var nome = window.prompt('Qual é o seu nome?') // perguntas!
+        var idade = window.prompt('E a sua idade?')
+        var nota = window.prompt('Quanto você tirou?')
+
+        var nf = nota >= 7 ? "Aprovado" : "Reprovado" // nota boa ou ruim
+        var id_boa = idade <= 17 && nf === "Aprovado" // descobrir se a idade está coerente com os estudos
+        var id = id_boa ? "Parabéns! Seus estudos estão corretos com a sua idade!" : "Infelizmente a sua idade ficará ou está avançada para esses estudos!" 
+
+    document.write(`Olá ${nome}, você foi ${nf}. ${id}`)
+    </script>
+    
+</body>
+</html>

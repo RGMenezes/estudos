@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes Sociais</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="fundo">
+        <div id="posicao">
+            <img id="celular" src="imagens/frame-iphone.png" alt="">
+            <div id="tela">
+                <iframe id="iframe" referrerpolicy="no-referrer" src="telas_cell/tela_home.html" frameborder="0">Infelizmente o seu navegador não reproduz este conteúdo.</iframe>
+            </div>
+        </div>
+    </div>
+
+    <menu>
+        <button onclick="home()" id="home"></button>
+        <button onclick="facebook()" id="facebook"></button>
+        <button onclick="github()" id="github"></button>
+        <button onclick="instagram()" id="instagram"></button>
+        <button onclick="twitter()" id="twitter"></button>
+        <button onclick="youtube()" id="youtube"></button>
+    </menu>
+
+
+    <script>
+        var iframe = document.getElementById('iframe')
+
+        function home(){
+            iframe.src = "telas_cell/tela_home.html"
+        }
+        function facebook(){
+            iframe.src = "telas_cell/tela_facebook.html"
+        }
+        function github(){
+            iframe.src = "telas_cell/tela_github.html"
+        }
+        function instagram(){
+            iframe.src = "telas_cell/tela_instagram.html"
+        }
+        function twitter(){
+            iframe.src = "telas_cell/tela_twitter.html"
+        }
+        function youtube(){
+            iframe.src = "telas_cell/tela_youtube.html"
+        }
+    </script>
+</body>
+</html>

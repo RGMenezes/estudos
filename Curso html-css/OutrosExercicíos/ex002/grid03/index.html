@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section{
+            background-color: darkcyan;
+            height: 300px;
+            width: 300px;
+            margin: 20px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+
+        }
+
+        div{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+
+        #content{
+            grid-template-columns: repeat(3, 80px);
+            grid-template-rows: repeat(3, 80px);
+            grid-auto-rows: minmax(100px, auto);
+            justify-content: space-evenly;
+            align-content: start;
+            overflow-y: scroll;
+        }
+
+        #items{
+            justify-items: end;
+            align-items: center;
+        }
+
+        .self{
+            justify-self: center;
+            align-self: end;
+        }
+    </style>
+</head>
+<body>
+    <section id="content">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <section id="items">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+
+    <!--Self-->
+    <section>
+        <div class="self"></div>
+        <div></div>
+        <div class="self"></div>
+        <div></div>
+        <div></div>
+        <div class="self"></div>
+        <div class="self"></div>
+        <div></div>
+        <div class="self"></div>
+    </section>
+</body>
+</html>

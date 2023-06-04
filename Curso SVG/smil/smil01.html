@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smil</title>
+    <style>
+        svg{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 100 100">
+        <circle id="c1" fill="#111" r="10" cx="11" cy="11"/>
+        <circle id="c2" fill="#222" r="10" cx="89" cy="11"/>
+        <circle id="c3" fill="#333" r="10" cx="89" cy="89"/>
+        <circle id="c4" fill="#444" r="10" cx="11" cy="89"/>
+
+        <animate
+        id="animation1"
+        xlink:href="#c1"
+        attributeName="cx"
+        to="89"
+        dur="1"
+        fill="freeze"
+        begin="click"
+        />
+
+        <animate
+        id="animation2"
+        xlink:href="#c2"
+        attributeName="cy"
+        to="89"
+        dur="1"
+        fill="freeze"
+        begin="animation1.begin + .6"
+        />
+
+        <animate
+        id="animation3"
+        xlink:href="#c3"
+        attributeName="cx"
+        to="11"
+        dur="1"
+        fill="freeze"
+        begin="animation2.begin + .6"
+        />
+
+        <animate
+        id="animation4"
+        xlink:href="#c4"
+        attributeName="cy"
+        to="11"
+        dur="1"
+        fill="freeze"
+        begin="animation3.begin + .6"
+        />
+    </svg>
+</body>
+</html>

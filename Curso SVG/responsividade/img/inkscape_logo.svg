@@ -1,0 +1,44 @@
+<svg
+viewBox="0 0 200 200"
+preserveAspectRatio="xMinyMin meet"
+>
+   <g>
+      <circle
+      style="fill:#333333;stroke-width:0.265077"
+      cx="100"
+      cy="100"
+      r="100" />
+
+      <circle
+      style="fill:#ffffff;stroke-width:0.251823"
+      cx="100"
+      cy="100"
+      r="95" />
+   </g>
+   <g>
+      <circle
+      style="fill:#333333;stroke-width:0.185554"
+      cx="100"
+      cy="100"
+      r="70" />
+      <rect
+      style="fill:#333333;stroke-width:0.264583"
+      width="59.170212"
+      height="59.744682"
+      x="63.765957"
+      y="53.425529" />
+      <rect
+      style="fill:#ffffff;stroke-width:0.264583"
+      width="80"
+      height="80"
+      x="60.5"
+      y="60.5" />
+      <rect
+      style="fill:#ffffff;stroke-width:0.264583"
+      width="80"
+      height="80"
+      x="-183.5208"
+      y="-44.680729"
+      transform="rotate(-136.86796)" />
+   </g>
+</svg>

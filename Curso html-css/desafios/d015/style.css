@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+div#fundo{
+    position: relative;
+    background-color: rgb(39, 38, 38);
+    background-image: url(imagens/fundo-madeira.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+#posicao{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: fit-content;
+    height: 90vh;
+}
+
+#celular{
+    width: 100%;
+    height: 100%;
+}
+
+div#tela{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -49%;
+    width: 86%;
+    height: 76%;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+menu{
+    position: absolute;
+    top: 10%;
+    right: 1%;
+    display: grid;
+}
+
+menu button{
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    margin: 10px 0px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0);
+    background-size: cover;
+}
+
+menu button:hover{
+    transform: scale(0.9);
+    transition: all 0.2s ease-in-out;
+}
+menu button:hover{
+    border: 2px solid rgb(255, 255, 255);
+    transition: all 0.2s ease-in-out;
+    transition-delay: 0.2s;
+}
+menu button:not(:hover){
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+    transition-delay: 0.2s;
+}
+menu button:not(:hover){
+    border: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+menu button:active{
+    transform: scale(1.1);
+    transition: all 0.150s ease-in-out;
+}
+
+#home{
+    background-image: url(imagens/logo-home.jpg);
+}
+#facebook{
+    background-image: url(imagens/logo-facebook.jpg);
+}
+#github{
+    background-image: url(imagens/logo-github.jpg);
+}
+#instagram{
+    background-image: url(imagens/logo-instagram.jpg);
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: center center;
+}
+#twitter{
+    background-image: url(imagens/logo-twitter.jpg);
+}
+#youtube{
+    background-image: url(imagens/logo-youtube.jpg);
+}
+
+@media (max-width: 400px) {
+    #posicao{
+        width: 230px;
+        height: 460px;
+    }
+
+    menu button{
+        width: 35px;
+        height: 35px;
+    }
+}

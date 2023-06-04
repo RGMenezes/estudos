@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>De onde ira começar? <input type="number" name="numc" id="numc"></p>
+        <P>Qual o fim? <input type="number" name="numf" id="numf"></p>
+        <p>Quanto vai pular? <input type="number" name="nump" id="nump"></p>
+        
+        <input type="button" value="Contar" onclick= Confirmar()>
+    </div>
+    <div id= 'res'>
+       
+    </div>
+    <script>
+        function Confirmar(){
+
+var res = document.getElementById("res")
+
+var numc = document.querySelector('input#numc')
+var nuc = Number(numc.value)
+
+
+var numf = document.querySelector('input#numf')
+var nuf = Number(numf.value)
+
+var nump = document.querySelector('input#nump')
+var nup = Number(nump.value)
+
+var c = nuc
+var f = nuf
+var p = nup
+while (c <= f){
+res.innerHTML=(`${c} 👉`)
+var c = c + p
+}
+res.innerHTML=(`🏁`)
+        }
+ 
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilização</title>
+    <style>
+        body{
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            --color1: green;
+            --color2: purple;
+        }
+        svg{
+            border: 2px solid red;
+            fill: yellow;
+            color: blue;
+        }
+        .circle{
+            fill: red;
+            color: black;
+        }
+        .circle2{
+            fill: currentColor;
+        }
+    </style>
+</head>
+<body>
+    <svg width="500" height="500" viewBox="0 0 100 100">
+        <circle class="circle" fill="orange" r="15" cx="50" cy="25"/>
+        <circle class="circle2" r="15" cx="50" cy="75"/>
+        <circle fill="var(--color1)" r="15" cx="25" cy="50"/>
+        <circle fill="var(--color2)" r="15" cx="75" cy="50"/>
+    </svg>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loader</title>
+    <style>
+        #loading{
+            transform-origin: center center;
+            animation: rodar 1.5s steps(100) infinite;
+        }
+
+        @keyframes rodar {
+            to{
+                transform: rotate(360deg); 
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 100 100">
+        <g id="loading">
+            <circle r="9" cy="50" cx="10" fill="#111"/>
+            <circle r="8" cy="70" cx="15" fill="#222"/>
+            <circle r="7" cy="83" cx="28" fill="#333"/>
+            <circle r="6" cy="89" cx="43" fill="#444"/>
+            <circle r="5" cy="89" cx="57" fill="#555"/>
+            <circle r="4" cy="86" cx="68" fill="#666"/>
+            <circle r="3" cy="81" cx="76" fill="#777"/>
+        </g>
+    </svg>
+</body>
+</html>

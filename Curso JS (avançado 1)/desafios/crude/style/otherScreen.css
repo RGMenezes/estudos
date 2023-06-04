@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+form{
+    float: left;
+    margin: 50px;
+}
+
+.output{
+    float: left;
+    margin: 50px;
+    width: 300px;
+    justify-self: center;
+}

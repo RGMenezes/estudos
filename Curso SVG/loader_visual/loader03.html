@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: #111111;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+
+        #triangulo{
+            stroke: white;
+            stroke-dasharray: 15;
+            stroke-dashoffset: 0;
+            animation: load 10s steps(1000) infinite;
+        }
+
+        #triangulo-texto{
+            fill: white;
+            font: normal normal .44em 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            animation: sumir .7s alternate infinite;
+        }
+
+        @keyframes sumir {
+            to{
+                fill-opacity: 0;
+            }
+        }
+        @keyframes load {
+            to{
+                stroke-dashoffset: 300;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <svg width="100" height="100" viewBox="0 0 30 43">
+
+        <polygon
+        id="triangulo"
+        points="15,1 29,29 1,29"
+        fill="none"
+        />
+        <text id="triangulo-texto" x="0" y="39">Loading...</text>
+    </svg>
+    
+</body>
+</html>
