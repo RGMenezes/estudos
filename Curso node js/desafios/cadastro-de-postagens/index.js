@@ -7,7 +7,13 @@ const Post = require("./models/Post");
 
 // Config
     // Tamplete Engine
-        app.engine('handlebars', engine());
+        app.engine('handlebars', engine({
+            defaultLayout: 'main',
+            runtimeOptions:{
+                allowProtoPropertiesByDefault: true,
+                allowProtoMethodsByDefault: true
+            }
+        }));
         app.set('view engine', 'handlebars');
         app.set('views', './views');
     // Body parser
@@ -17,7 +23,9 @@ const Post = require("./models/Post");
 //Rotas
 
     app.get('/', function(req, res){
-        res.render('home');
+        Post.findAll({order: [['id', 'DESC']]}).then(function(posts){
+            res.render('home', {posts: posts});
+        });
     });
 
     app.get("/cad", function(req, res){
