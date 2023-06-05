@@ -1,7 +1,7 @@
 /* Conectando ao banco de dados mysql usando o soquelize. */
 
 const Sequelize = require("sequelize");
-const sequelize = new Sequelize("teste", "root", "@mixsgamer11", { 
+const sequelize = new Sequelize("teste", "root", "123456", { 
     //1º parametro = nome do banco de dados, 2° usuario para se conectar ao mysql, 3º senha. 4° objeto json.
     host: "localhost", //Qual servidor está o mysql.
     dialect: 'mysql' //Qual tipo de banco de dados está se conectando.
