@@ -42,7 +42,14 @@ const Post = require("./models/Post");
             res.send("Houve um erro: " + error);
        });
     });
-    //teste
+    
+    app.get('/deletar/:id', function(req, res){
+        Post.destroy({where: {"id": req.params.id}}).then(() => {
+            res.send("Postagem deletada com sucesso!")
+        }).catch((error) => {
+            res.send("Esta postagem não existe! ")
+        });
+    });
 
 
 
