@@ -3,6 +3,8 @@ const router = express.Router();
 const mongoose = require("mongoose");
 require("../models/Categoria");
 const Categorias = mongoose.model("categorias");
+require("../models/Postagem");
+const Postagens = mongoose.model("postagens");
 
 router.get('/', (req, res) => {
     res.render("admin/index");
@@ -131,6 +133,59 @@ router.get("/postagens/add", (req, res) => {
         req.flash("error_msg", "Houve um erro ao carregar o formulario!");
         res.redirect("/admin");
     });
+});
+
+router.post("/postagens/nova", (req, res) => {
+    let erros = [];
+
+    if(!req.body.nome || typeof req.body.nome == undefined || req.body.nome == null || req.body.nome.length > 255){
+        erros.push({texto: "Nome inválido"});
+    };
+
+    if(!req.body.slug || typeof req.body.slug == undefined || req.body.slug == null || req.body.slug.length > 255){
+        erros.push({texto: "Slug inválido"});
+    };
+
+    if(!req.body.descricao || typeof req.body.descricao == undefined || req.body.descricao == null || req.body.descricao.length > 255){
+        erros.push({texto: "Descrição inválida"});
+    };
+
+    if(!req.body.conteudo || typeof req.body.conteudo == undefined || req.body.conteudo == null){
+        erros.push({texto: "Conteudo inválido"});
+    };
+
+    if(req.body.categoria == "0"){
+        erros.push({texto: "Categoria inválida, registre uma categoria"})
+    };
+
+    if(req.body.nome.length < 2){
+        erros.push({texto: "Nome da postagem é muito pequeno"});
+    };
+
+    if(erros.length > 0){
+        Categorias.find().lean().then((categorias) => {
+            res.render("admin/addpostagens", {erros: erros, categorias: categorias});
+        }).catch((err) => {
+            req.flash("error_msg", "Houve um erro ao carregar dados, tente novamente!");
+            res.redirect("/admin/postagens");
+        });
+    }else{
+        const novaPostagem = {
+            nome: req.body.nome,
+            slug: req.body.slug,
+            descricao: req.body.descricao,
+            conteudo: req.body.conteudo, 
+            categoria: req.body.categoria
+        };
+    
+        new Postagens(novaPostagem).save().then(() =>  {
+            req.flash("success_msg", "Postagem criada com sucesso!");
+            res.redirect("/admin/postagens");
+        }).catch((err) => {
+            req.flash("error_msg", "Houve um erro ao salvar a postagem, tente novamente!");
+            res.redirect("/admin/postagens");
+        });
+    };
 });
 
 
