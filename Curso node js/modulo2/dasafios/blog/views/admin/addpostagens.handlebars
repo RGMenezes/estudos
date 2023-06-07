@@ -1,0 +1,31 @@
+<div class="card">
+    <div class="card-body">
+        <h4>Nova postagem: </h4>
+        <form action="/admin/categorias/nova" method="POST" >
+            <label for="nome">Nome: </label>
+            <input class="form-control" type="text" name="nome" id="nome" placeholder="Nome da categoria">
+
+            <label for="slug">Slug: </label>
+            <input class="form-control" type="text" name="slug" id="slug" placeholder="Slug da categoria">
+
+            <label for="descricao">Descrição: </label>
+            <input class="form-control" type="text" name="descricao" id="descricao" placeholder="Descrição da categoria">
+
+            <label for="conteudo">Conteúdo: </label>
+            <textarea class="form-control" name="conteudo" id="conteudo"></textarea>
+
+            <label for="categoria">Categoria: </label>
+            <Select class="form-select" name="categoria" id="categoria" >
+                {{#each categorias}}
+                    <option value="{{_id}}">{{nome}}</option>
+                {{else}}
+                    <option value="0">Nenhuma categoria registrada</option>
+                {{/each}}
+            </Select>
+            <br>
+            
+            <button type="submit" class="btn btn-success">Criar categoria</button>
+
+        </form>
+    </div>
+</div>

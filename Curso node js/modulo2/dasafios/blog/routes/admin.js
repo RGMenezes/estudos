@@ -120,8 +120,17 @@ router.post("/categorias/deletar", (req, res) => {
     });
 });
 
-router.get('/categorias', (req, res) => {
-    res.send("Página de categorias");
+router.get('/postagens', (req, res) => {
+    res.render("admin/postagens");
+});
+
+router.get("/postagens/add", (req, res) => {
+    Categorias.find().then((categorias) => {
+        res.render("admin/addpostagens", {categorias: categorias});   
+    }).catch((err) => {
+        req.flash("error_msg", "Houve um erro ao carregar o formulario!");
+        res.redirect("/admin");
+    });
 });
 
 
