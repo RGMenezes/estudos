@@ -7,14 +7,14 @@
     <div class="card-body">
         <h4>Nova postagem: </h4>
         <form action="/admin/postagens/nova" method="POST" >
-            <label for="nome">Nome: </label>
-            <input class="form-control" type="text" name="nome" id="nome" placeholder="Nome da categoria">
+            <label for="titulo">Título: </label>
+            <input class="form-control" type="text" name="titulo" id="titulo" placeholder="Título da postagem">
 
             <label for="slug">Slug: </label>
-            <input class="form-control" type="text" name="slug" id="slug" placeholder="Slug da categoria">
+            <input class="form-control" type="text" name="slug" id="slug" placeholder="Slug da postagem">
 
             <label for="descricao">Descrição: </label>
-            <input class="form-control" type="text" name="descricao" id="descricao" placeholder="Descrição da categoria">
+            <input class="form-control" type="text" name="descricao" id="descricao" placeholder="Descrição da postagem">
 
             <label for="conteudo">Conteúdo: </label>
             <textarea class="form-control" name="conteudo" id="conteudo"></textarea>
@@ -29,7 +29,7 @@
             </Select>
             <br>
             
-            <button type="submit" class="btn btn-success">Criar categoria</button>
+            <button type="submit" class="btn btn-success">Criar postagem</button>
 
         </form>
     </div>
