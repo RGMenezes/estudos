@@ -10,7 +10,8 @@ const Usuario = mongoose.model("usuarios");
 
 module.exports = function(passport) {
 
-    passport.use(new localStrategy({usernameField: "email"}, (email, senha, done) => {//Escolhe o campo a ser analizado. No caso o email.
+    passport.use(new localStrategy({usernameField: "email", passwordField: "senha"}, (email, senha, done) => {//Escolhe o campo a ser analizado. No caso o email.
+    //O passwordField só é necessário caso o "name" do input de senha esteja com um nome dirente de "password".
 
 
         Usuario.findOne({email: email}).then((usuario) => { //Pesquisa o usuário no banco de dados.
@@ -20,7 +21,7 @@ module.exports = function(passport) {
             };
             bcrypt.compare(senha, usuario.senha, (erro, batem) => { //compara dois valores encriptados.
                 if(batem){
-                    return done(null, user);
+                    return done(null, usuario);
                 }else{
                     return done(null, false, {message: "Senha incorreta"});
                 };
@@ -38,10 +39,13 @@ module.exports = function(passport) {
         done(null, usuario.id);
     });
 
-    passport.deserializeUser((id, done) => { //Procura o usuário pelo id.
-        User.findById(id, (err, usuario) => {
-            done(err, user);
-        });
+    passport.deserializeUser( async (id, done) => { //Procura o usuário pelo id.
+        try {
+            const usuarioProcurado =  Usuario.findById(id);
+            done(null, usuarioProcurado);
+        } catch (err) {
+            done(err);
+        };
     });
 
 };
