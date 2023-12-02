@@ -40,3 +40,7 @@ function entrevista(nome: string, idade: number, experiencia: boolean = false){
 };
 entrevista('Rafael', 18);
 entrevista('Jonas', 87, true);
+
+
+
+//Tem a função anonima e IFEE, mas tu já conhece.
