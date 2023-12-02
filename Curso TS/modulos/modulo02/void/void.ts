@@ -14,5 +14,5 @@ olaMundo();
 
 let variavelTeste: void = undefined; //Void só recebe undefined.
 
-variavelTeste = 1; //Apresenta erro.
-variavelTeste = null //Sem erro se habilitar como false 'strictNullChecks'.
+// variavelTeste = 1; //Apresenta erro.
+// variavelTeste = null //Sem erro se habilitar como false 'strictNullChecks'.
